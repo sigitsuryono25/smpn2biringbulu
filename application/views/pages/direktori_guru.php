@@ -1,14 +1,9 @@
-<?php
-$galeri = $this->galeri->getGaleriWithConditionAndLimit(['id_album' => 17], 4, 0)->result();
-?>
-<div class="my-3  border-0">
-    <div class="card-header p-2 bg-transparent  rounded-0 border-0">
-        <span class="text-white font-weight-bold text-primary h4"><i class="fas fa-images"></i> Galeri</span>
-    </div>
-    <div class="card-body border-0">
-        <div class="row p-0">
-            <?php foreach ($galeri as $data) { ?>
-                <div class="col-md-3">
+<?php $this->load->view('headfoot/header') ?>
+<div class="bg-white border-0 rounded-0">
+    <div class="container mar-top">
+        <div class="row  p-4">
+            <?php foreach ($guru as $data) { ?>
+                <div class="col-md-3 mb-3">
                     <div class="card gallery rounded-0">
                         <div class="card-header p-0  border-0 rounded-0">
                             <a href="<?= URL_IMAGE_GALLERY . $data->gbr_gallery ?>" class="highslide" onclick="return hs.expand(this)" title="Klik Untuk memperbesar">
@@ -23,12 +18,12 @@ $galeri = $this->galeri->getGaleriWithConditionAndLimit(['id_album' => 17], 4, 0
                         <div class="card-body text-center ">
                             <?php
                             if (mb_strlen($data->jdl_gallery) > 40) {
-                               $title = $data->jdl_gallery;
+                                $title = $data->jdl_gallery;
                             } else {
                                 $title = $data->jdl_gallery . "<br><br>";
                             }
                             ?>
-                            <p class="title-news small"><?= $title ?></p>
+                            <span class="title-news small"><?= $title ?></span>
                         </div>
                     </div>
                 </div>
@@ -36,3 +31,4 @@ $galeri = $this->galeri->getGaleriWithConditionAndLimit(['id_album' => 17], 4, 0
         </div>
     </div>
 </div>
+<?php $this->load->view('headfoot/footer') ?>

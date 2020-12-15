@@ -52,3 +52,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+$route['profile-(:any).html'] = 'Profile/show_content/$1';
+$route['guru-dan-staf-smp-negeri-2-biringbulu.php'] = 'welcome/direktori_guru/20';
+$route['info-sekolah'] = 'welcome/info_sekolah/40';
+$route['ekstrakurikuler'] = 'welcome/info_sekolah/46';
+$route['galeri-foto'] = 'welcome/direktori_guru/17';
+$route['video'] = 'welcome/video';

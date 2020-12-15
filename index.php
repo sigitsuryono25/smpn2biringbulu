@@ -1,4 +1,5 @@
 <?php
+$hola = "anyong";
 /**
  * CodeIgniter
  *

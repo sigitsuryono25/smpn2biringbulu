@@ -1,25 +1,29 @@
 <?php
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
-	public function index()
-	{
-		$this->load->view('home');
-	}
+    public function index() {
+        $this->load->view('home');
+    }
+
+    function direktori_guru($id) {
+        $data['judul'] = $this->galeri->getGaleriWithCondition(['gallery.id_album' => $id])->row()->jdl_album;
+        $data['guru'] = $this->galeri->getGaleriWithCondition(['.gallery.id_album' => $id])->result();
+        $this->load->view('pages/direktori_guru', $data);
+    }
+
+    function info_sekolah($id) {
+        $data['info'] = $this->berita->getBeritaWithCondition(['id_kategori' => $id])->result();
+        $this->load->view('pages/info_sekolah', $data);
+    }
+
+    function video() {
+        $data['judul'] = "Video";
+        $data['video'] = $this->video->getVideoWithCondition([])->result();
+//        print_r($data);
+        $this->load->view('pages/video', $data);
+    }
+
 }
