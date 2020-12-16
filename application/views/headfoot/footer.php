@@ -1,50 +1,46 @@
+<a href="javascript:void(0)" class="scrollup d-none">Scroll</a>
 <div class="clearfix bg-white"></div>
 <div class="footer_graph"></div>
 <div class="clearfix  bg-white"></div>
-<div class="footer bg-dark ">
+<div class="footer footer-bg">
     <div class="container p-4">
-        <div class="row">
+        <div class="row d-flex justify-content-center">
             <div class="col-md-3">
                 <div class="card rounded-0 border-0  bg-transparent">
-                    <div class="card-header-sm p-2 bg-primary">
+                    <div class="card-header-sm p-2 ">
                         <span class="text-white">Tentang Kami</span>
                     </div>
                     <div class="card-body bg-transparent py-2 px-0">
-                        <div class="alamat border-bottom pb-2">
-                            <small class="text-primary"><i class="fas fa-map-marker-alt"></i> 
+                        <div class="alamat pb-2">
+                            <img class="w-75" src="<?= base_url('assets/img/logo smp negeri 2 biringbulu.png') ?>" /><br><br>
+                            <small class="text-primary mt-4 jari" title="Klik Untuk membuka peta" onclick="window.open('https://goo.gl/maps/pt5F532DJ45VtFnn7')"><i class="fas fa-map-marker-alt"></i> 
                                 Alamat: Ciniayo Kelurahan Lauwa Kecamatan Biringbulu</small>
                         </div>
-                        <div class="w-auto">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63548.69932583973!2d119.7541856!3d-5.4482581!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf51106a46c4ba19e!2sSMPN%202%20Biringbulu!5e0!3m2!1sen!2sid!4v1607672526807!5m2!1sen!2sid" 
-                                    width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="card rounded-0 border-0  bg-transparent">
-                    <div class="card-header-sm p-2 bg-primary">
-                        <span class="text-white">Info Sekolah</span>
-                    </div>
-                    <div class="card-body bg-transparent py-2 px-0">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card rounded-0 border-0  bg-transparent">
-                    <div class="card-header-sm p-2 bg-primary">
-                        <span class="text-white">Ekstrakurikuler</span>
-                    </div>
-                    <div class="card-body bg-transparent py-2 px-0">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card rounded-0 border-0  bg-transparent">
-                    <div class="card-header-sm p-2 bg-primary">
+                    <div class="card-header-sm p-2">
                         <span class="text-white">Link Terkait</span>
                     </div>
                     <div class="card-body bg-transparent py-2 px-0">
+                        <span><a href="http://www.kemdikbud.go.id/" target="_blank" class="text-primary text-decoration-none small" >Kementerian Pendidikan</a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card rounded-0 border-0  bg-transparent">
+                    <div class="card-header-sm p-2">
+                        <span class="text-white">Hubungi Kami</span>
+                    </div>
+                    <div class="card-body bg-transparent py-2 px-0">
+                        <a class="text-decoration-none small" href="tel:+6282192748141"><i class="fa fa-phone" aria-hidden="true"></i> +62 8219-2748-141 </a><br>
+                        <a class="text-decoration-none small" href="mailto:smpnegeri2biringbulu@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i> smpnegeri2biringbulu@gmail.com</a><br><br>
+                        <i class="fab fa-facebook facebook-color mx-2"></i>
+                        <i class="fab fa-twitter twitter-color mx-2"></i>
+                        <i class="fab fa-instagram mx-2 ig-color"></i>
+                        <i class="fab fa-youtube-square mx-2 text-danger" aria-hidden="true"></i>
                     </div>
                 </div>
             </div>
@@ -57,7 +53,20 @@
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+<script>
+                                var position = 0;
+                                $(window).scroll(function () {
+                                    position = $(this).scrollTop();
+                                    if (position > 200) {
+                                        $(".scrollup").addClass('d-block').removeClass("d-none").fadeIn();
+                                    } else if (position < 10) {
+                                        $(".scrollup").removeClass('d-block').addClass("d-none").fadeIn();
+                                    }
+                                });
+                                $(".scrollup").on("click", function () {
+                                    $(window).scrollTop(0);
+                                });
+</script>
 </body>
 
 </html>

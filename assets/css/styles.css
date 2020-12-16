@@ -1,6 +1,14 @@
 *{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
+html{
+    scroll-behavior: smooth;
+
+}
+.menu-size{
+    font-size: 11px !important;
+}
+
 .bg-grey{
     background: #F4F4F4;
 }
@@ -34,7 +42,7 @@
 }
 .opacity-menu{
     background: whitesmoke;
-    opacity: .8
+    opacity: .85
 }
 .title-news {
     overflow: hidden;
@@ -60,18 +68,78 @@ ul{
 .center-cropped {
     width: 100%;
     height: 100vh;
-    object-fit: none; /* Do not scale the image */
     object-position: center; /* Center the image within the element */
 }
 
+.div-center-crop{
+    width: 100%;
+    height: 150px;
+    background: var(--url);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat
+}
+.max-card-height{
+    max-height: 550px; 
+    overflow: hidden;
+    height: 550px
+}
+.max-title-card-height{
+    max-height: 150px; 
+    height: 150px;
+    overflow: hidden;
+}
+
+.link-title:hover{
+    color: #007bff !important;
+}
+
+.footer-bg{
+    background: #262626;
+}
+
+.scrollup{
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    position: fixed;
+    bottom: 22px;
+    right: 20px;
+    display: none;
+    outline: none;
+    text-indent: -9999px;
+    background: url(../img/scroll-top-arrow.png) no-repeat left top;
+    z-index: 999;
+}
+
+.jari{
+    cursor: pointer
+}
+
+.cover-slider{
+    background: var(--url);
+    width: 100%; 
+    height: 100vh; 
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+}
+
+.max-height-container{
+    height: 100vh !important;
+}
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
 /* Set the image to fill its parent and make transparent */
-.center-cropped img {
+/*.center-cropped img {
     min-height: 100vh;
     min-width: 100%;
-    /* IE 8 */
+     IE 8 
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    /* IE 5-7 */
+     IE 5-7 
     filter: alpha(opacity=0);
-    /* modern browsers */
+     modern browsers 
     opacity: 0;
-}
+}*/

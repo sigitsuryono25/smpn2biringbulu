@@ -1,5 +1,5 @@
 <div class="row my-3">
-    <div class="col-md-12">
+<!--    <div class="col-md-12">
         <div class="card  border-0 rounded-0 ">
             <div class="card-header-sm p-2 bg-primary  rounded-0">
                 <span class="text-white font-weight-bold">Kepala Sekolah</span>
@@ -8,11 +8,11 @@
 
             </div>
         </div>
-    </div>
-    <div class="col-md-12 mt-2">
+    </div>-->
+    <div class="col-md-6 mt-2">
         <div class="card  border-0 rounded-0 ">
-            <div class="card-header-sm p-2 bg-primary  rounded-0">
-                <span class="text-white font-weight-bold text-uppercase">Pendaftar Siswa Baru</span>
+            <div class="card-header-sm p-2  rounded-0  text-center">
+                <span class="text-white font-weight-bold text-uppercase text-primary h4"> <i class="fab fa-wpforms"></i> Pendaftar Siswa Baru</span>
             </div>
             <div class="card-body text-center">
                 <a href="https://forms.gle/6mFvGuTGrGgcFBm27">
@@ -21,10 +21,10 @@
             </div>
         </div>
     </div>
-    <div class="col-md-12 mt-2">
+    <div class="col-md-6     mt-2">
         <div class="card  border-0 rounded-0 ">
-            <div class="card-header-sm p-2 bg-primary  rounded-0">
-                <span class="text-white font-weight-bold">Link Ujian Online</span>
+            <div class="card-header-sm p-2 rounded-0 text-center">
+                <span class="font-weight-bold  text-primary h4 "> <i class="fas fa-flask"></i> Link Ujian Online</span>
             </div>
             <div class="card-body text-center">
                 <a href="http://ujian-online.smpnegeri2biringbulu.sch.id/">
@@ -33,7 +33,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-12 mt-2">
+<!--    <div class="col-md-12 mt-2">
         <div class="card border-0 rounded-0 ">
             <div class="card-header-sm p-2 bg-primary  rounded-0">
                 <span class="text-white font-weight-bold">Banner Link</span>
@@ -59,5 +59,5 @@
                 </a>
             </div>
         </div>
-    </div>
+    </div>-->
 </div>

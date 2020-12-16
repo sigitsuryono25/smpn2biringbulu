@@ -25,5 +25,10 @@ class Welcome extends CI_Controller {
 //        print_r($data);
         $this->load->view('pages/video', $data);
     }
+    
+    function reader($id){
+        $data['berita'] = $this->berita->getBeritaWithCondition(['id_berita' => $id])->row();
+        
+    }
 
 }

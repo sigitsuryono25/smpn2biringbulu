@@ -6,14 +6,11 @@
                 <div class="col-md-3 mb-3">
                     <div class="card gallery rounded-0">
                         <div class="card-header p-0  border-0 rounded-0">
-                            <a href="<?= URL_IMAGE_GALLERY . $data->gbr_gallery ?>" class="highslide" onclick="return hs.expand(this)" title="Klik Untuk memperbesar">
+                            <a href="<?= URL_IMAGE_GALLERY . $data->gbr_gallery ?>" class="spotlight" title="<?= $data->jdl_gallery ?>">
                                 <div
-                                    style="background: url('<?= URL_IMAGE_GALLERY . $data->gbr_gallery ?>');width: 100%;height: 150px;background-size: cover;background-position: center;background-repeat: no-repeat;">
+                                    style="background: url('<?= URL_IMAGE_GALLERY . "kecil_".$data->gbr_gallery ?>');width: 100%;height: 150px;background-size: cover;background-position: center;background-repeat: no-repeat;">
                                 </div>
                             </a>
-                            <div class="highslide-caption">
-                                <span><?= $data->jdl_gallery ?></span>
-                            </div>
                         </div>
                         <div class="card-body text-center ">
                             <?php
@@ -31,4 +28,13 @@
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function () {
+//        $("ul>li>ol>li").addClass("h6 text-justify");
+//        $("ul>li").addClass("h6 text-justify");
+//        $(".top-header").removeClass("fixed-top").addClass("bg-white");
+        $(".navbar").addClass("bg-white shadow-sm");
+        $(".top-menu").removeClass("opacity-menu");
+    });
+</script>
 <?php $this->load->view('headfoot/footer') ?>

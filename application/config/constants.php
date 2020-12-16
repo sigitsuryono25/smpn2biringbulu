@@ -17,6 +17,7 @@ defined('SHOW_DEBUG_BACKTRACE') OR define('SHOW_DEBUG_BACKTRACE', TRUE);
 define("URL_IMAGE_NEWS", "https://smpnegeri2biringbulu.sch.id/foto_berita/");
 define("URL_IMAGE_GALLERY", "https://smpnegeri2biringbulu.sch.id/img_galeri/");
 define("URL_IMAGE_BANNER", "https://smpnegeri2biringbulu.sch.id/foto_banner/");
+define("URL_IMAGE_SLIDER", "https://smpnegeri2biringbulu.sch.id/images/slides/");
 
 /*
 |--------------------------------------------------------------------------

@@ -24,6 +24,10 @@
                     </div>
                 </div>
             <?php } ?>
+            
+            <div class="col-md-12 text-center pt-3">
+                <a class="btn btn-sm btn-primary" href="<?= site_url('video') ?>">Video Lainnya</a>
+            </div>
         </div>
     </div>
 </div>

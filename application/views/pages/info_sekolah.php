@@ -5,7 +5,7 @@
             <div class="col-md-8">
                 <div class="row  p-4">
                     <?php foreach ($info as $data) { ?>
-                        <div class="col-md-12 border-bottom py-3">
+                        <div class="col-md-12 border-bottom py-3 jari" onclick="location.assign('<?= site_url("berita-$data->id_berita-$data->judul_seo.html") ?>')">
                             <div class="row ">
                                 <div class="col-md-4 my-1 p-0" style="background: url('<?= URL_IMAGE_NEWS . $data->gambar ?>');
                                      background-position: center; background-size: cover; background-repeat: no-repeat; width: available; height: 200px ">

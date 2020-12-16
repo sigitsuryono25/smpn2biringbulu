@@ -59,7 +59,7 @@ $autoload['packages'] = array();
   |
   |	$autoload['libraries'] = array('user_agent' => 'ua');
  */
-$autoload['libraries'] = array('database', 'email', 'session');
+$autoload['libraries'] = array('database', 'email', 'session', 'user_agent');
 
 /*
   | -------------------------------------------------------------------
@@ -138,5 +138,6 @@ $autoload['model'] = array(
     'Etc' => 'etc',
     'Galeri_m' => 'galeri',
     'Video_m' => 'video',
-    'Staticpage_m' => 'static'
+    'Staticpage_m' => 'static',
+    'Slider_m' => 'slider'
 );

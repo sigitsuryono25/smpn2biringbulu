@@ -1,18 +1,27 @@
 <div class="container-fluid bg-white">
-    <div class="container">
+    <div class="container <?= $full_height?>">
         <div class="mar-top p-3">
             <div class="row">
-                <div class="col-md-12 mb-4">
-                    <span class="h4"><?= $titles ?></span>
-                </div>
-                <div class="col-md-9">
+                <div class="col-md-7 mx-3">
+                    <h4 class="h4"><?= $titles ?></h4>
+                    <small><?php
+                    if ($from == 'berita') {
+                        echo $this->etc->tanggalIndonesiaFormat($tanggal);
+                    }
+                    ?></small><br><br>
                     <?php if (!empty($gambar)) { ?>
-                    <img width="150" align="left" src="<?= URL_IMAGE_BANNER . $gambar ?>" class="mx-3 mt-5"/>
+                    <img width="<?= $width ?>" align="<?= $align?>" src="<?= $gambar ?>" class="mr-4 <?= $bottom?> mt-2 img-fluid"/>
                     <?php } ?>
                     <?php echo $content ?>
                 </div>
-                <div class="col-md-3">
-
+                <div class="col-md-4">
+                    <?php
+                    if ($from == 'berita') {
+                        $this->load->view('module/mod_sidebar_news');
+                    } else {
+                        
+                    }
+                    ?>
                 </div>
             </div>
         </div>
@@ -25,5 +34,6 @@
 //        $(".top-header").removeClass("fixed-top").addClass("bg-white");
         $(".navbar").addClass("bg-white shadow-sm");
         $(".top-menu").removeClass("opacity-menu");
+        $("p").addClass("text-justify ")
     });
 </script>
